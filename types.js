@@ -19,7 +19,7 @@ const doubleArr1 = [['name', 'surnmae'], [1, 2]];
 console.log(arr1[0])
 console.log(doubleArr1[0][0]);
 
-// built-in functions
+// built-in methods
 arr1.push(2);
 arr1.pop();
 arr1[1] = 'mesut'
@@ -37,6 +37,7 @@ console.log(arr3[0] === arr2[0])
 
 const user = {
     name: "ahmet",
+    password: "1234",
     surname: "uzgor",
     highschool: "GOP Anadolu",
     cars: [
@@ -44,6 +45,8 @@ const user = {
         "fiat"
     ]
 };
+// orm
+knex.insert(user)
 
 // orm => object relational mapping;
 
@@ -85,7 +88,7 @@ const avg1 = calculateAverage(numbers)
 console.log('Yöntem 1 => Ortalama =', avg1)
 
 
-function calculateAverage(numbers) {
+function calculateAverage({numbers1, numbers2}) {
     // .length array in eleman sayısını
     // (numbers[0] + numbers[1])/a.length
 
@@ -110,7 +113,7 @@ const calcAvg = (numbers) => {
     return sum/numbers.length
 }
 
-const avg2 = calcAvg(numbers);
+const avg2 = calcAvg({numbers1: [], numbers: []});
 console.log(`Yöntem 2 => Ortalama = ${avg2}`)
 
 
